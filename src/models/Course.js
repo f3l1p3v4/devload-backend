@@ -6,8 +6,9 @@ const CourseSchema = new mongoose.Schema({
     description: String,
     priceCurrent: Number,
     pricePrevious: Number,
-    pupil: String,
+    author: String,
     category: String,
+    pricePortion: String,
 },
 {
     toJSON: {

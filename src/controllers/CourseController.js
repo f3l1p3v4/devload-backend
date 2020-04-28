@@ -15,7 +15,7 @@ module.exports = {
 
     async store(req, res) {
         const { filename } = req.file;
-        const { name, description, priceCurrent, pricePrevious, pupil, category } = req.body;
+        const { name, description, priceCurrent, pricePrevious, author, category, pricePortion } = req.body;
 
         return res.json(await Course.create({ 
             image: filename, 
@@ -23,8 +23,9 @@ module.exports = {
             description, 
             priceCurrent, 
             pricePrevious, 
-            pupil, 
-            category 
+            author, 
+            category,
+            pricePortion
         }));
     }
 };
